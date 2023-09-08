@@ -4,7 +4,7 @@
  * main - Entry point
  * Description: C program print with puts function
  *
- * return: always 0 when success
+ * Return: always 0 when success
  */
 int main(void)
 {
