@@ -2,22 +2,18 @@
 
 /**
  * print_last_digit - Prints the last digit of a number.
- * @n: The number.
+ * @n: The number in question.
  *
  * Return: Value of the last digit.
  */
 int print_last_digit(int n)
 {
-	int lst_dig = n % 10;
+	int last_digit = n % 10;
 
-	if (lst_dig < 0)
-	{
-		lst_dig *= -1;
-	}
-	else
-	{
-		_putchar(lst_dig + '0');
-	}
+	if (last_digit < 0)
+		last_digit *= -1;
 
-	return (lst_dig);
+	_putchar(last_digit + '0');
+
+	return (last_digit);
 }
