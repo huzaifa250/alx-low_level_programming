@@ -2,7 +2,7 @@
 
 /**
 *main - Entry Point
-*Description: C program print using _putchar
+*Description: print _putchar using putchar prorotype
 *
 *Return: Always 0 (success)
 */
@@ -18,5 +18,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
