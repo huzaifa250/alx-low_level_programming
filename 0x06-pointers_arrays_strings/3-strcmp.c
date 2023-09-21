@@ -20,7 +20,12 @@ int _strcmp(char *s1, char *s2)
 		{
 			return (1);
 		}
+		/*heck the lengths of the strings*/
+		else if (*s1 == '\0' && *s2 == '\0')
+		{
+			return (0);/*s1 equal to s2 */
+		}
 	/*move to next character in both strings */
 	s1++;
-	s2++
+	s2++;
 }
