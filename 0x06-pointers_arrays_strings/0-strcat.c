@@ -13,11 +13,11 @@ char *_strcat(char *dest, char *src)
 
 	s = 0;
 	/* find the size of dest*/
-	while (dest[s])
+	while (dest[s] != '\0')
 		s++;
 
 	/*loop through src array value without null*/
-	for (s2 = 0; src[s2]; s2++)
+	for (s2 = 0; src[s2] != '\0'; s2++)
 		/*append src[s2] to dest[s]*/
 		dest[s++] = src[s2];
 
