@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strcat - function concatenates srtings
@@ -10,12 +9,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j = strlen(src);
+	int s, s2;
 
-	for (i = 0; dest[i] != '\0'; i++)
-	{
-		src[i + j] = dest[i];
-	}
-	src[i + j] = '\0';
+	s = 0;
+	/* find the size of dest*/
+	while (dest[s])
+		s++;
+
+	/*loop through src array value without null*/
+	for (s2 = 0; src[s2]; s2++)
+		/*append src[s2] to dest[s]*/
+		dest[s++] = src[s2];
+
+	return (dest);
 }
