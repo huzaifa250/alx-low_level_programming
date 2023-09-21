@@ -9,19 +9,22 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int s, s2;
+	int i, j;
 
-	s = 0;
-	/* find the size of dest*/
-	while (dest[s])
+	i = 0, j = 0;
+
+	while (dest[i] != '\0')
 	{
-		s++;
+		i++;
 	}
 
-	/*loop through src array value without null*/
-	for (s2 = 0; src[s2]; s2++)
+	while (src[j] != '\0')
 	{
-		dest[s++] = src[s2];
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
+
+	dest[i] = '\0';
 	return (dest);
 }
