@@ -4,54 +4,52 @@
  * infinite_add - add two numbers
  * @n1: first paramter
  * @n2: second paramter
- * @r : pointer to buffer
- * @size_r : buffer size
- * Return: pointer call function
+ * @r : result
+ * @size_r : result size or lenght
+ * Return: sum of two numbers
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int ov = 0, i = 0, j = 0, d = 0, v1 = 0, v2 = 0, tmp_tot = 0;
 
-	while (*(n1 + i) != '\0')
-	{
-		i++;
-	}
-	while (*(n2 + j) != '\0')
-	{
-		j++;
-	}
-	i--;
-	j--;
-	if (j >= size_r || i >= size_r)
-	{
+	int v1 = 0, v2 = 0, o, b, d1, d2, add = 0;
+
+	while (*(n1 + v1) != '\0')
+		v1++;
+	while (*(n2 + v2) != '\0')
+		v2++;
+	if (v1 >= v2)
+		b = v1;
+	else
+		b = v2;
+	if (size_r <= b + 1)
 		return (0);
-	}
-	while (j >= 0 || i >= 0 || ov == 1)
+	r[b + 1] = '\0';
+	v1--, v2--, size_r--;
+	d1 = *(n1 + v1) - 48, d2 = *(n2 + v2) - 48;
+	while (b >= 0)
 	{
-		if (i < 0)
-			v1 = 0;
+		o = d1 + d2 + add;
+		if (o >= 10)
+			add = o / 10;
 		else
-			v1 = *(n1 + i) - '0';
-		if (j < 0)
-			v2 = 0;
+			add = 0;
+		if (o > 0)
+		*(r + b) = (o % 10) + 48;
 		else
-			v2 = *(n2 + j) - '0';
-		tmp_tot = v1 + v2 + ov;
-		if (tmp_tot >= 10)
-			ov = 1;
+			*(r + b) = '0';
+		if (v1 > 0)
+			v1--, d1 = *(n1 + v1) - 48;
 		else
-			ov = 0;
-		if (d >= (size_r - 1))
-			return (0);
-		*(r + d) = (tmp_tot % 10) + '0';
-		d++;
-		j--;
-		i--;
+			d1 = 0;
+		if (v2 > 0)
+			v2--, d2 = *(n2 + v2) - 48;
+		else
+			d2 = 0;
+		b--, size_r--;
 	}
-	if (d == size_r)
-		return (0);
-	*(r + d) = '\0';
-	return (r);
+	if (*(r) == '0')
+		return (r + 1);
+	else
+		return (r);
 }
-
