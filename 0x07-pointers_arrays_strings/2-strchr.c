@@ -11,18 +11,17 @@
 
 char *_strchr(char *s, char c)
 {
-	/*Start from the beginning of the string*/
-	while (*s != '\0')
-	{
-		/*Check if the current character matches 'c'*/
-		if (*s == c)
+	int it;
+
+		for (it = 0; s[it] >= '\0'; it++)
 		{
-			/*Return a pointer to the matching character*/
-			return (s);
+			if (s[it] == c)
+			{
+				return (s + it);
+			}
+			if (it == 0)
+			{
+				return (NULL);
+			}
 		}
-		/* Move to the next character in the string*/
-		s++;
-	}
-	/*If 'c' is not found, return NULL*/
-	return (NULL);
 }
