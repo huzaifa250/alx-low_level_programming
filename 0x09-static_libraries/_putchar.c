@@ -1,10 +1,11 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
-*main - Entry Point
-*Description: C program write the char c using _putchar
+* _putchar - write character c to stdout
+* @c: The character to print
 *
-*Return: Always 0 (success)
+*Return: Always 0 (success), -1 (fail)
 */
 
 int _putchar(char c)
