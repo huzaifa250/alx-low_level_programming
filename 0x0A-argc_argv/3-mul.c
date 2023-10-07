@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
  * main - multiplies two numbers
- * @args:  number of command line arguments
- * @argv:  pointer to array of args
+ * @argc: number of arguments
+ * @argv: pointer to array of args
+ *
  * Return: 0(success) , 1 (fail)
  */
 
