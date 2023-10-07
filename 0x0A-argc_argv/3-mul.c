@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * _atoi - converts a string to an integer
- * main-print sum of two nums
- * @args: number of commandline arguments
- * @argv: pointer to array of command line args
- * Return: 0(success) , other fail
+ * main - multiplies two numbers
+ * @args:  number of command line arguments
+ * @argv:  pointer to array of args
+ * Return: 0(success) , 1 (fail)
  */
 
 int main(int argc, char *argv[])
