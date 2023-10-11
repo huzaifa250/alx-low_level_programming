@@ -6,6 +6,9 @@
  * @name: dog's name(var instance)
  * @age: dog's age(var instance2)
  * @owner: dog's owner(var instance3)
+ *
+ * Description : alone dog struct
+*/
 
 struct dog
 {
@@ -18,20 +21,3 @@ struct dog
 #endif
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#endif
