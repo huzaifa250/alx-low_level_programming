@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-void first(void) __attribute__ ((constructor));
+void construct_f(void) __attribute__ ((constructor));
 
 /**
  * construct_f - prints a sentence before the main
