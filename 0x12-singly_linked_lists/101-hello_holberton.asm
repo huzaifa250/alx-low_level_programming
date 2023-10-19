@@ -1,6 +1,3 @@
-section .data
-    format db "Hello, Holberton", 10, 0  ; Define the format string with a new line (10) and null terminator (0)
-
 section .text
     global main
 
@@ -16,4 +13,5 @@ main:
     mov rax, 60      ; The syscall number for exit (60 for exit)
     xor rdi, rdi     ; Status code (0 for success)
     syscall
+	format: db `Hello, Holberton\n`,0
 
