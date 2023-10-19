@@ -1,17 +1,9 @@
-section .text
-    global main
-
+          global    main
+          extern    printf
 main:
-    ; Prepare the arguments for printf
-    mov rdi, format  ; Load the address of the format string into rdi
-
-    ; Call printf
-    mov rax, 0       ; The syscall number for printf (0 for printf)
-    call printf
-
-    ; Exit the program
-    mov rax, 60      ; The syscall number for exit (60 for exit)
-    xor rdi, rdi     ; Status code (0 for success)
-    syscall
-	format: db `Hello, Holberton\n`,0
-
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov 	eax, 0
+	  ret
+format: db `Hello, Holberton\n`,0
