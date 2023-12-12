@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
-*main - Entry Point
-*Description: C program write the char c using _putchar
-*Return: Always 0 (success)
+*_putchar - write the character c to stdout
+*@c: character to print
+*
+*Return: 1 on (success)
+*On error,-1 is returned
 */
 
 int _putchar(char c)
